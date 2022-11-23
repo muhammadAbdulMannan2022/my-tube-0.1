@@ -15,10 +15,17 @@ body {
 }
 .overlay {
   width: 100%;
-  height: 100vh;
+  height: calc(100%);
+  transform: translateX(-100%);
+  position: sticky;
+  display: none;
+  z-index: 1;
+  top: 0;
 }
 .overlayS {
   background: rgba(19, 19, 19, 0.5);
+  transform: translateX(0%);
+  position: absolute;
   display: block;
 }
 nav {
@@ -32,6 +39,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 .navbar {
   width: 90%;
@@ -193,4 +201,24 @@ nav {
   .serch .input input {
     padding: 5px 0;
   }
+}
+/* containerVideo */
+.video {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerVideo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+}
+.card {
+  width: 300px;
+  background: #fff;
+  margin: 20px;
+}
+.card img {
+  width: 100%;
 }
